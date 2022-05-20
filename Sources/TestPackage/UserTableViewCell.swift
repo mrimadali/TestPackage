@@ -23,5 +23,11 @@ public class UserTableViewCell: UITableViewCell {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UserTableViewCell
         return view
     }
+    
+    public static func loadNib() -> UINib {
+        let bundle = Bundle.module
+        let nib = UINib(nibName: "UserTableViewCell", bundle: bundle)
+        return nib
+    }
 
 }
