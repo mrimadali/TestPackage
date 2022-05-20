@@ -13,6 +13,8 @@
 		DB64748D2837C32300172039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB64748B2837C32300172039 /* Main.storyboard */; };
 		DB64748F2837C32400172039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB64748E2837C32400172039 /* Assets.xcassets */; };
 		DB6474922837C32400172039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6474902837C32400172039 /* LaunchScreen.storyboard */; };
+		DB64749B2837C3C000172039 /* TestPackage in Frameworks */ = {isa = PBXBuildFile; productRef = DB64749A2837C3C000172039 /* TestPackage */; };
+		DB64749D2837C3FF00172039 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB64749C2837C3FF00172039 /* UserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		DB64748E2837C32400172039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6474912837C32400172039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB6474932837C32400172039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB64749C2837C3FF00172039 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB64749B2837C3C000172039 /* TestPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				DB64748E2837C32400172039 /* Assets.xcassets */,
 				DB6474902837C32400172039 /* LaunchScreen.storyboard */,
 				DB6474932837C32400172039 /* Info.plist */,
+				DB64749C2837C3FF00172039 /* UserTableViewController.swift */,
 			);
 			path = PackageExample;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = PackageExample;
+			packageProductDependencies = (
+				DB64749A2837C3C000172039 /* TestPackage */,
+			);
 			productName = PackageExample;
 			productReference = DB6474822837C32300172039 /* PackageExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = DB6474792837C32300172039;
+			packageReferences = (
+				DB6474992837C3C000172039 /* XCRemoteSwiftPackageReference "TestPackage" */,
+			);
 			productRefGroup = DB6474832837C32300172039 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			files = (
 				DB64748A2837C32300172039 /* ViewController.swift in Sources */,
 				DB6474862837C32300172039 /* AppDelegate.swift in Sources */,
+				DB64749D2837C3FF00172039 /* UserTableViewController.swift in Sources */,
 				DB6474882837C32300172039 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB6474992837C3C000172039 /* XCRemoteSwiftPackageReference "TestPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mrimadali/TestPackage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB64749A2837C3C000172039 /* TestPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6474992837C3C000172039 /* XCRemoteSwiftPackageReference "TestPackage" */;
+			productName = TestPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB64747A2837C32300172039 /* Project object */;
 }
