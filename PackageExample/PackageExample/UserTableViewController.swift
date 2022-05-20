@@ -37,6 +37,8 @@ class UserTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! UserTableViewCell
         
+        cell.titleLabel.text = "Mohammad Imad"
+        cell.subTitleLabel.text = "Software Engineer"
         return cell
     }
     
