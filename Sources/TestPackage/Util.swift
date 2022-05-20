@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Util {
     public static func loadFromNib() -> UserTableViewCell {
