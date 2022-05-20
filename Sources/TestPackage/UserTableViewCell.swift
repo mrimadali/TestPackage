@@ -12,4 +12,7 @@ public class UserTableViewCell: UITableViewCell {
     @IBOutlet public weak var titleLabel: UILabel!
     @IBOutlet public weak var subTitleLabel: UILabel!
     
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
