@@ -24,7 +24,7 @@ class UserTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.tableView.register(UINib(nibName: "UserTableViewCell", bundle: Bundle.module), forCellReuseIdentifier: "UserTableViewCell")
+        self.tableView.register(Util.loadNib(), forCellReuseIdentifier: "UserTableViewCell")
     }
 
     // MARK: - Table view data source
