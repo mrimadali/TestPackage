@@ -8,6 +8,12 @@
 import UIKit
 import TestPackage
 
+#if SWIFT_PACKAGE
+let frameworkBundle = Bundle.module
+#else
+let frameworkBundle = Bundle(for: UserTableViewCell.self)
+#endif
+
 class UserTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -18,7 +24,7 @@ class UserTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.tableView.register(UINib(nibName: "UserTableViewCell", bundle: .main), forCellReuseIdentifier: "UserTableViewCell")
+        self.tableView.register(UINib(nibName: "UserTableViewCell", bundle: frameworkBundle), forCellReuseIdentifier: "UserTableViewCell")
     }
 
     // MARK: - Table view data source

@@ -23,6 +23,7 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "TestPackageTests",
-            dependencies: ["TestPackage"]),
+            dependencies: ["TestPackage"],
+            resources: [.process("Resource/UserTableViewCell.xib")]),
     ]
 )
