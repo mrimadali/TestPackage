@@ -44,7 +44,7 @@ class UserTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! UserTableViewCell
         
         cell.titleLabel.text = "Mohammad Imad"
-        cell.subTitleLabel.text = "Software Engineer"
+        cell.subTitleLabel.text = "iOS Engineer"
         return cell
     }
     
