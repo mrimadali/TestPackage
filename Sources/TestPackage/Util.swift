@@ -18,6 +18,9 @@ public struct Util {
     }
     
     public static func loadNib() -> UINib {
+        let moduleName = String(reflecting: TypeInCurrentModule.self)
+          .split(separator: ".")[0]
+        print("The current Module is \(moduleName)")
         let bundle = Bundle.module
         let nib = UINib(nibName: "UserTableViewCell", bundle: bundle)
         return nib
